@@ -1,0 +1,298 @@
+/* CSS for Header */
+/* CSS for Header */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to horizontally center the logo */
+}
+
+.logo h1 {
+  font-size: 24px;
+  margin: 0;
+  color: white;
+}
+
+.logo .logo-calc {
+  color: #4caf50; /* Update the color of the logo text here */
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; /* Add this line to horizontally center the navigation links */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+nav ul li a:visited {
+  color: #b6c099;
+}
+
+nav ul li a.current {
+  font-weight: bold;
+}
+
+ /* CSS for Content */
+.content {
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.content .founder {
+  color: #555;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content h3 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.content .uses {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.content .uses li {
+  margin-bottom: 10px;
+}
+
+.content .about {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.content .contact {
+  color: #555;
+  text-align: center;
+  margin-top: 30px;
+}
+/* CSS for Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* CSS Styles for GST Calculator */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="number"],
+select {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.hidden {
+  display: none;
+}
+
+#taxableAmount,
+#gstAmount,
+#totalAmount {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/* CSS Styling for E-Commerce Price Calculator  */
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Calculator container styles */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Shipping info styles */
+#shippingInfo {
+  display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 10px;
+  }
+}
+
+/* CSS Styling for Temprature Calculator */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 200px;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
