@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" type="text/css" href="\styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .containert {
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .containert label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .containert input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+  <header>
+      <div class="logo">
+        <h1>TWAM <span class="logo-calc">CALCULATOR</span></h1>
+      </div>
+      <nav id="head">
+        <ul>
+          <li><a href="../Index.html">Home</a></li>
+          <li><a href="../Electricity Bill Calculator/electricitycal.html">Electricity Calculator</a></li>
+          <li><a href="../GST Calculator/gst.html">GST Calculator</a></li>
+          <li><a href="../E-Commerce Calculator/E-Commerce Pricing Calculator.html">E-Commerce Pricing Calculator</a></li>
+          <li><a href="../Temprature Calculator.html/temp calc.html">Temprature Calculator</a></li>
+        </ul>
+      </nav>
+    </header>
+<body>
+    <div class="containert">
+        <h2>Temperature Converter</h2>
+        <label for="fahrenheit">Fahrenheit:</label>
+        <input type="number" id="fahrenheit" placeholder="Enter Fahrenheit" oninput="convertTemperature('fahrenheit')" />
+
+        <label for="celsius">Celsius:</label>
+        <input type="number" id="celsius" placeholder="Enter Celsius" oninput="convertTemperature('celsius')" />
+
+        <label for="kelvin">Kelvin:</label>
+        <input type="number" id="kelvin" placeholder="Enter Kelvin" oninput="convertTemperature('kelvin')" />
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function convertTemperature(source) {
+            var fahrenheit = document.getElementById('fahrenheit');
+            var celsius = document.getElementById('celsius');
+            var kelvin = document.getElementById('kelvin');
+            var result = document.getElementById('result');
+
+            if (source === 'fahrenheit') {
+                celsius.value = ((parseFloat(fahrenheit.value) - 32) * 5 / 9).toFixed(2);
+                kelvin.value = ((parseFloat(fahrenheit.value) + 459.67) * 5 / 9).toFixed(2);
+            } else if (source === 'celsius') {
+                fahrenheit.value = ((parseFloat(celsius.value) * 9 / 5) + 32).toFixed(2);
+                kelvin.value = (parseFloat(celsius.value) + 273.15).toFixed(2);
+            } else if (source === 'kelvin') {
+                celsius.value = (parseFloat(kelvin.value) - 273.15).toFixed(2);
+                fahrenheit.value = ((parseFloat(kelvin.value) * 9 / 5) - 459.67).toFixed(2);
+            }
+
+            result.innerHTML = "Fahrenheit: " + fahrenheit.value + "°F, Celsius: " + celsius.value + "°C, Kelvin: " + kelvin.value + "K";
+        }
+    </script>
+</body>
+</html>
