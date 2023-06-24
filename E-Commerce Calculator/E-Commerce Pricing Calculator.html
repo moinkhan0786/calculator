@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-Commerce Selling Price Calculator</title>
+  <script src="script.js"></script>
+  <style>
+    #shippingInfo {
+      display: none;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="\styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+          <h1>TWAM <span class="logo-calc">CALCULATOR</span></h1>
+        </div>
+        <nav id="head">
+          <ul>
+            <li><a href="../Index.html">Home</a></li>
+            <li><a href="../Electricity Bill Calculator/electricitycal.html">Electricity Calculator</a></li>
+            <li><a href="../GST Calculator/gst.html">GST Calculator</a></li>
+            <li><a href="../E-Commerce Calculator/E-Commerce Pricing Calculator.html">E-Commerce Pricing Calculator</a></li>
+            <li><a href="../Temprature Calculator.html/temp calc.html">Temperature Calculator</a></li>
+          </ul>
+        </nav>
+      </header>
+     
+  <h1>Selling Price Calculator</h1>
+  
+  <label for="platform">Platform:</label>
+  <select id="platform" onchange="toggleShippingInfo()">
+    <option value="meesho">Meesho</option>
+    <option value="flipkart">Flipkart</option>
+    <option value="amazon">Amazon</option>
+  </select>
+  <br>
+  
+  <label for="category">Category:</label>
+  <select id="category">
+    <option value="apparel">Apparel</option>
+    <option value="others">Others</option>
+  </select>
+  <br>
+  
+  <label for="purchasePrice">Purchase Price:</label>
+  <input type="number" id="purchasePrice" step="0.01">
+  <br>
+  
+  <label for="profitPercentage">Profit Percentage(What Profit % you want):</label>
+  <input type="number" id="profitPercentage" step="0.01">
+  <br>
+  
+  <label for="totalOrders">Monthly Average Orders:</label>
+  <input type="number" id="totalOrders">
+  <br>
+  
+  <label for="returnPercentage">Monthly Average Return Percentage:</label>
+  <input type="number" id="returnPercentage" step="0.01">
+  <br>
+  
+  <label for="returnFee">Return Fee Per Pees:</label>
+  <input type="number" id="returnFee" step="0.01">
+  <br>
+  
+  <div id="shippingInfo">
+    <label for="weight">Shipping Weight in (kg):</label>
+    <input type="number" id="weight" step="0.01">
+    <br>
+    
+    <label for="shippingLocation">Shipping Location:</label>
+    <select id="shippingLocation">
+      <option value="local">Local</option>
+      <option value="regional">Regional</option>
+      <option value="national">National</option>
+      <option value="ixd">IXD</option>
+    </select>
+    <br>
+  </div>
+  
+  <button onclick="calculateSellingPrice()">Calculate Selling Price</button>
+  
+  <h2 id="formula"></h2>
+  <h2 id="sellingPrice"></h2>
+
+
+  <h1>E-Commerce Calculator: FAQs</h1>
+
+  <h3>Q: What is an E-Commerce Calculator?</h3>
+  <p>A: An E-Commerce Calculator is a tool designed to help online sellers determine the optimal selling price for their products. It takes into account various factors such as purchase price, profit percentage, shipping fees, return fees, and marketplace fees to calculate the selling price that ensures profitability.</p>
+
+  <h3>Q: How does an E-Commerce Calculator work?</h3>
+  <p>A: The E-Commerce Calculator uses a set of formulas and parameters to calculate the selling price. It takes inputs such as purchase price, profit percentage, total orders, return percentage, and marketplace platform, and applies the relevant calculations based on the specific platform's fee structure. It considers costs like purchase price, desired profit, marketplace fees, shipping fees, and return deductions to arrive at the optimal selling price.</p>
+
+  <h3>Q: What are the benefits of using an E-Commerce Calculator?</h3>
+  <p>A: Using an E-Commerce Calculator offers several benefits, including:
+    <ul>
+      <li>Profit Optimization: It helps sellers determine the selling price that maximizes their profits by considering various cost factors and marketplace fees.</li>
+      <li>Time-saving: Instead of manually calculating the selling price for each product, the calculator automates the process, saving time and effort.</li>
+      <li>Accuracy: By considering multiple cost components and marketplace fees, the calculator provides a more accurate selling price, reducing the risk of underpricing or overpricing products.</li>
+      <li>Decision-making: Sellers can make informed decisions about pricing strategies, profitability, and assessing the viability of selling on different platforms.</li>
+    </ul>
+  </p>
+
+  <h3>Q: What factors does the E-Commerce Calculator consider in its calculations?</h3>
+  <p>A: The E-Commerce Calculator takes into account the following factors:
+    <ul>
+      <li>Purchase Price: The cost at which the seller acquires the product.</li>
+      <li>Profit Percentage: The desired profit margin or percentage on the purchase price.</li>
+      <li>Total Orders: The number of orders expected to be fulfilled.</li>
+      <li>Return Percentage: The estimated percentage of products likely to be returned.</li>
+      <li>Return Fee: The fee associated with each returned product.</li>
+      <li>Platform: The marketplace platform on which the product will be sold.</li>
+      <li>Category: The category of the product, which may affect marketplace fees.</li>
+      <li>Shipping Weight: The weight of the product for shipping cost calculation.</li>
+      <li>Shipping Location: The destination of the shipment, which may influence shipping fees.</li>
+    </ul>
+  </p>
+
+  <!-- Add more Q&A or FAQs here -->
+  <footer>
+    <p>&copy; 2023 TWAM Calculator. All rights reserved.</p>
+  </footer>
+</body>
+</html>
