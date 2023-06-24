@@ -1,5 +1,4 @@
 /* CSS for Header */
-/* CSS for Header */
 header {
   background-color: #333;
   color: #fff;
@@ -10,7 +9,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center; /* Add this line to horizontally center the logo */
+  justify-content: center;
 }
 
 .logo h1 {
@@ -20,7 +19,7 @@ header {
 }
 
 .logo .logo-calc {
-  color: #4caf50; /* Update the color of the logo text here */
+  color: #4caf50;
   font-weight: bold;
   font-size: 24px;
   margin-left: 5px;
@@ -29,7 +28,7 @@ header {
 nav {
   margin-top: 10px;
   display: flex;
-  justify-content: center; /* Add this line to horizontally center the navigation links */
+  justify-content: center;
 }
 
 nav ul {
@@ -60,7 +59,7 @@ nav ul li a.current {
   font-weight: bold;
 }
 
- /* CSS for Content */
+/* CSS for Content */
 .content {
   margin: 20px;
   background-color: #fff;
@@ -104,6 +103,7 @@ nav ul li a.current {
   text-align: center;
   margin-top: 30px;
 }
+
 /* CSS for Footer */
 footer {
   background-color: #333;
@@ -165,7 +165,6 @@ button:hover {
   margin-top: 10px;
   font-weight: bold;
 }
-
 
 /* CSS Styling for E-Commerce Price Calculator  */
 /* Reset default browser styles */
@@ -253,14 +252,47 @@ ul {
 }
 
 /* Responsive styles */
-@media (max-width: 480px) {
-  .container {
-    max-width: 100%;
+@media (max-width: 767px) {
+  /* Header */
+  header {
     padding: 10px;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  nav ul li {
+    margin-right: 5px;
+  }
+
+  /* Content */
+  .content {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .content .founder {
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 5px;
+  }
+
+  /* GST Calculator */
+  .container {
+    padding: 10px;
+  }
+
+  input[type="number"],
+  select {
+    padding: 5px;
   }
 }
 
-/* CSS Styling for Temprature Calculator */
+/* CSS Styling for Temperature Calculator */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -295,4 +327,3 @@ button {
   cursor: pointer;
   margin-right: 10px;
 }
-
