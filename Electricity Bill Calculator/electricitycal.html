@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TWAM Calculator - Electricity Calculator</title>
+  <link rel="stylesheet" type="text/css" href="\styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>TWAM <span class="logo-calc">CALCULATOR</span></h1>
+    </div>
+      <nav id="head">
+        <ul>
+          <li><a href="../Index.html">Home</a></li>
+          <li><a href="../Electricity Bill Calculator/electricitycal.html">Electricity Calculator</a></li>
+          <li><a href="../GST Calculator/gst.html">GST Calculator</a></li>
+          <li><a href="../E-Commerce Calculator/E-Commerce Pricing Calculator.html">E-Commerce Pricing Calculator</a></li>
+          <li><a href="../Temprature Calculator.html/temp calc.html">Temprature Calculator</a></li>
+        </ul>
+      </nav>
+    </header>
+  <div class="content">
+    <!-- Content for other calculators -->
+
+    <!-- Electricity Calculator -->
+    <section id="electricity">
+      <h2>Electricity Calculator</h2>
+      <form id="electricityForm">
+        <div class="form-group">
+          <label for="appliancePower">Appliance Power:</label>
+          <input type="number" id="appliancePower" min="0" step="0.01" required>
+          <select id="powerUnit">
+            <option value="watt">Watt</option>
+            <option value="kW">Kilowatt</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="capacity">Run at Capacity:</label>
+          <input type="number" id="capacity" min="0" max="100" step="1" required>
+          <span>%</span>
+        </div>
+        <div class="form-group">
+          <label for="usage">Usage (Hours per Day):</label>
+          <input type="number" id="usage" min="0" step="0.01" required>
+        </div>
+        <div class="form-group">
+          <label for="pricePerUnit">Electricity Price per Unit:</label>
+          <input type="number" id="pricePerUnit" min="0" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="billingFrequency">Billing Frequency:</label>
+            <select id="billingFrequency">
+              <option value="day">Per Day</option>
+              <option value="month">Per Month</option>
+              <option value="year">Per Year</option>
+            </select>
+          </div>
+        <div class="form-group">
+          <button type="submit">Calculate</button>
+        </div>
+        <div id="result" class="form-group">
+          <label for="billAmount">Bill Amount:</label>
+          <span id="billAmount"></span>
+        </div>
+      </form>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2023 TWAM Calculator. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
